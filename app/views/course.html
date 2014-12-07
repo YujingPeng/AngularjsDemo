@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    $('.tree-toggle').click(function () {
+           $(this).parent().children('ul.tree').toggle(200);
+           alert(1);
+    });
+</script>
+
+<div class="container">
+  <div class="courseMain">
+
+     <div class="row">
+
+        <div class="col-md-3"><!-- course  menu start -->
+        	<div class="span3">
+	    <div class="well"   ng-controller="IndexCtrl">
+	            <ul class="nav nav-list" ng-repeat="(main, subs) in categorys" >
+	                <li>
+	                     <ul class="tree-toggle nav-header menu-first">
+	                    	<li><p>{{main}}</p></li>
+	                    </ul>
+	                    <ul class="nav nav-list tree  menu-second">
+	                        <li  ng-repeat="sub in subs"><a href="#">{{sub.sub}}</a></li>
+	                        
+	                    </ul>
+	                </li>
+	                <li class="divider"></li>
+	               <!--  <li>
+	                    <ul class="tree-toggle nav-header menu-first">
+	                    	<li><p>兒童成長</p></li>
+	                    </ul>
+	                    <ul class="nav nav-list tree menu-second">
+	                        <li><a href="#">兒童才藝</a></li>
+	                        <li><a href="#">課外興趣</a></li>
+	                        <li><a href="#">語言學習</a></li>
+	                        <li><a href="#">體育及心理</a></li>
+	                    </ul>
+	                </li> -->
+
+
+	            </ul>
+	    </div>
+    	</div>
+        </div><!-- end course menu -->
+
+        <div class="col-md-9" role="main"><!-- course main description start -->
+      	   <ng-include src="'views/courseMain.html'"></ng-include>
+        </div><!-- course main description end -->
+
+
+       </div><!-- row end -->
+   </div><!-- courseMain end -->	
+</div>
+

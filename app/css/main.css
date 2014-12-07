@@ -1,0 +1,287 @@
+/**********hotCourse  start ***************/
+.searchBar{
+      height: 50px;
+      width: auto;
+      margin: 10px auto 20px  auto;
+}
+.searchBar a:hover{
+      font-size: 1.2em;
+      color: #69aa6f;
+       text-decoration: none;
+}
+.searchBar a:visited{
+       color: #BA55D3;
+       text-decoration: none;
+}
+
+/* Button - these styles are the good stuff */
+
+.button {
+    text-align: center;
+    border: none;
+    border-radius: 1.25em;
+    color: #000000;
+    font-size: 1.2em;
+    margin: 0 .5em 1em;
+    padding: .5em 1.5em .5em;
+    position: relative;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+/* Round */
+.round {
+    border-radius: 1.25em;
+}
+/* Red */
+.red {
+    background-color: #ff6c6f;
+}
+/* Grey */
+.grey {
+    background-color: #cccccc;
+}
+
+/*  Each  course*/
+.courseList{
+      width: 980px;
+      height: 900px;
+      /*margin-top: 20px;*/
+      /*margin-bottom: 20px;*/
+}
+.course { 
+	height: 400px; 
+	width: 300px;
+	overflow: hidden;
+	border-color: #aaa; 
+	 border-color: transparent;
+	border: solid 10px rgba(249,245, 245, 1); 
+}
+.course .pic { 
+	border: solid 1px rgba(0, 0, 0, 0); 
+	width: 300px; 
+	height: 250px;
+	position: relative; 
+	overflow: hidden; 
+}
+.course .pic img { 
+	height: 100%;
+	width:100%;
+}
+.course a:hover { 
+	color: #69aa6f; /*mouse on  <a>*/
+	text-decoration: none; 
+}
+.course a:visited { 
+	color: #BA55D3; /*has visited*/
+	text-decoration: none; 
+}
+.course.title {
+	margin: 10px; 
+	font-size: 12px; 
+	font-size: 0.9em; 
+}
+.course .title h4{
+	display: block; 
+	font-size: 15px; 
+	font-size: 1.6em; 
+	height: 30px; 
+	color: #333333; 
+	overflow: hidden; 
+}
+.course .title h4:hover { 
+	color: #69aa6f; 
+	text-decoration: none; 
+}
+
+.course .title p { 
+	display: block; 
+	color: #333333; 
+	overflow: hidden; 
+}
+.course .title p:hover { 
+	color: #69aa6f; 
+	text-decoration: none; 
+}
+/**********HotCOurse end****************/
+
+
+/********HoneyBox directory start************/
+    .secondHoney {
+      width: 900px;
+      height: 560px;
+    }
+  .hexagon {
+        display: inline;
+        float: left;
+    }
+
+
+
+    #first-1 {
+        margin-left: 140px;
+         margin-top:30px;
+    }
+
+
+    #first-2 {
+        margin-left: 30px;
+        margin-top:30px;
+    }
+    #first-3 {
+        margin-left: 30px;
+        margin-top:30px;
+    }
+      #first-4 {
+        margin-left: 30px;
+        margin-top:30px;
+    }
+     #second-1 {
+        clear: left;
+        margin-left: 58px;
+        margin-top: -16px;
+    }
+      #second-2 {
+        margin-left: 30px;
+        margin-top: -16px;
+    }
+      #second-3 {
+       margin-left: 30px;
+        margin-top: -16px;
+    }
+      #second-4{
+       margin-left: 30px;
+        margin-top: -16px;
+    }
+    #second-5{
+       margin-left: 30px;
+        margin-top: -16px;
+    }
+     #third-1 {
+        clear: left;
+        margin-left: 140px;
+        margin-top:-16px
+    }
+      #third-2{
+         margin-left: 30px;
+        margin-top: -16px;
+    }
+    #third-3{
+        margin-left: 30px;
+        margin-top: -16px;
+    }
+    #third-4{
+        margin-left: 30px;
+         margin-top: -16px;
+    }
+    .main-search{
+       /*  margin: auto;*/
+         clear: left;
+         margin-top: -60px;
+         margin-left:33px;
+         height: 100px;
+         width: 700px;
+    }
+    .search { 
+    	position:relative; 
+    	width: 520px;
+    	margin: auto;
+     }
+
+    /*background color orange*/
+    .hiveTop{
+        width: 0;
+        border: 40px solid #F08080;
+        border-top: none;
+        border-bottom: 40px solid #F08080;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+    }
+    .hiveCenter {
+        width: 140px;
+        height: 80px;
+        background-color:  	#F08080;/*#6C6*/
+    }
+    .hiveCenter:hover{
+      cursor: pointer;
+    }
+    .hiveBottom {
+        width: 0;
+        border: 40px solid #F08080;
+        border-bottom: none;
+        border-top: 40px solid #F08080;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+    }
+     /*background color blue*/
+    .hiveTop2{
+        width: 0;
+        border: 40px solid #B0E0E6;
+        border-top: none;
+        border-bottom: 40px solid #B0E0E6;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+    }
+    .hiveCenter2 {
+        width: 140px;
+        height: 80px;
+        background-color:  	#B0E0E6;/*#6C6*/
+    }
+    .hiveBottom2 {
+        width: 0;
+        border: 40px solid #B0E0E6;
+        border-bottom: none;
+        border-top: 40px solid #B0E0E6;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+    }
+     /*background color black*/
+    .hiveTop3{
+        width: 0;
+        border: 40px solid #9ACD32;
+        border-top: none;
+        border-bottom: 40px solid #9ACD32;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+    }
+    .hiveCenter3 {
+        width: 140px;
+        height: 80px;
+        background-color:  	#9ACD32;/*#6C6*/
+    }
+    .hiveBottom3 {
+        width: 0;
+        border: 40px solid #9ACD32;
+        border-bottom: none;
+        border-top: 40px solid #9ACD32;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+    }
+}
+}
+/********Honeycomb directory  end**************/
+
+/*************foot css start***************/
+.foot-ul a:hover{
+       text-decoration: none;
+}
+.foot-ul a:visited{
+       text-decoration: none;
+}
+
+.item p{
+      margin: 20px auto;
+      font-size: 1.2em;
+      color: #333333; 
+      cursor: pointer;
+      text-decoration: none;
+}
+.item p:hover{
+      color: #69aa6f;
+      text-decoration: none;
+}
+.item p:visited{
+      color: #BA55D3;
+      /*text-decoration: none;*/
+}
+/**************foot css end*****************

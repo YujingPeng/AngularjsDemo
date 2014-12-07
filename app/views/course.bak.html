@@ -1,0 +1,33 @@
+<div class="container">
+  <div >
+     Search:<input ng-model="query" type="text" placeholder="search what you want"  class="form-control" />
+  </div>
+  
+   <h1>CourseList</h1>
+  <table  class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Teacher</th>
+          <th>Number</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="course in courses | filter:query">
+          <td align="left">{{course.name}}</td>
+          <td align="left">{{course.address}}</td>
+          <td align="left">{{course.teacher}}</td>
+          <td align="left">{{course.num}}</td>
+          <td align="left">{{course.price}}</td>
+          <td align="left">
+                          <button class="btn btn-primary" ng-click="deleteProduct(product.Id)" value="Remove">Add</button>
+                          <button class="btn btn-primary" ng-click="deleteProduct(product.Id)" value="Remove">Edit</button>
+                          <button class="btn btn-danger" ng-click="deleteProduct(product.Id)" value="Remove">X</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>  
+</div>

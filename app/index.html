@@ -1,0 +1,280 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/course.css">
+    <link rel="stylesheet" href="css/main.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <script type="text/javascript">
+          function closeMune(){
+                       $('.cd-nav-trigger').removeClass('nav-is-visible');
+                      $('.cd-main-header').removeClass('nav-is-visible');
+                      $('.cd-primary-nav').removeClass('nav-is-visible');
+                      $('.has-children ul').addClass('is-hidden');
+                      $('.has-children a').removeClass('selected');
+                      $('.moves-out').removeClass('moves-out');
+                      $('.cd-main-content').removeClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+                        $('body').removeClass('overflow-hidden');
+                      });
+                      $('.cd-overlay').removeClass('is-visible');
+                      window.location.href='#/course';
+                       // window.location.href='#/about?id='+userId;
+                  }
+    </script>
+    <title>CourseDay</title>
+  </head>
+  <body ng-app="demoApp">
+     <header class="cd-main-header">
+        <a class="cd-logo" href="#0"><img src="images/cd-logo.svg" alt="Logo"></a>
+
+        <ul class="cd-header-buttons">
+          <li><a class="cd-search-trigger" href="#cd-search">Search<span></span></a></li>
+          <li><a class="cd-nav-trigger" href="#cd-primary-nav"  >Menu<span></span></a></li>
+        </ul> <!-- cd-header-buttons -->
+    </header>
+
+
+    <main class="cd-main-content" >
+      <div ng-view="" ></div>
+       <div class="cd-overlay"></div>
+  </main>
+
+<!--   <ng-include src="'views/test.html'"></ng-include> -->
+<nav class="cd-nav" >
+      <ul id="cd-primary-nav" class="cd-primary-nav is-fixed"  >
+        
+        <li class="has-children"  ng-controller="IndexCtrl" >
+          <a href="#">Course</a>
+          <ul class="cd-secondary-nav is-hidden"  >
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="#">All Course</a></li>
+            <li class="has-children"  ng-repeat="(main, subs) in categorys">
+                   <a href="#/about" >{{main}}</a>
+                  <ul class="is-hidden">
+                    <li class="see-all"><a href="#/about">All  {{main}}</a></li>
+                        <li ng-repeat=" sub in subs"><a href="javascript:void(0);" onclick="closeMune();">{{sub.sub}}</a></li>
+                  </ul>
+                <!--   <div ng-repeat="(main, subs) in categorys">
+                    <div ng-repeat=" sub in subs">
+                        {{main}} : {{sub.sub}}
+                    </div>
+                </div> 
+<a ng-click="courseMain({{sub.sub}})">
+
+                href="#/{{sub.sub}}" -->
+                 
+            </li>
+          </ul>
+        </li>
+
+
+     
+           <!--  <li class="has-children">
+              <a href="#">Art</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Course</a></li>
+                <li class="see-all"><a href="#">All Art</a></li>
+                <li><a href="">Glasses</a></li>
+                <li><a href="#/gloves">Gloves</a></li>
+                <li><a href="#">Jewellery</a></li>
+                <li><a href="#">Scarves</a></li>
+                <li><a href="#">Wallets</a></li>
+                <li><a href="#">Watches</a></li>
+              </ul>
+            </li> -->
+
+
+        <li class="has-children">
+          <a href="#">Gallery</a>
+
+          <ul class="cd-nav-gallery is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="#">Browse Gallery</a></li>
+            <li>
+              <a class="cd-nav-item" href="#">
+                <img src="images/img.jpg" alt="Product Image">
+                <h3>Product #1</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item" href="#">
+                <img src="images/img.jpg" alt="Product Image">
+                <h3>Product #2</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item" href="#">
+                <img src="images/img.jpg" alt="Product Image">
+                <h3>Product #3</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item" href="#">
+                <img src="images/img.jpg" alt="Product Image">
+                <h3>Product #4</h3>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-children">
+          <a href="#">Services</a>
+          <ul class="cd-nav-icons is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="#">Browse Services</a></li>
+            <li>
+              <a class="cd-nav-item item-1" href="#">
+                <h3>Service #1</h3>
+                <p>This is <table></table>he item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-2" href="#">
+                <h3>Service #2</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-3" href="#">
+                <h3>Service #3</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-4" href="#">
+                <h3>Service #4</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-5" href="#">
+                <h3>Service #5</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-6" href="#">
+                <h3>Service #6</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-7" href="#">
+                <h3>Service #7</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-8" href="#">
+                <h3>Service #8</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="#">Standard</a></li>
+
+      </ul> <!-- primary-nav -->
+    </nav> <!-- cd-nav -->
+
+
+  <div id="cd-search" class="cd-search">
+      <form>
+        <input type="search" placeholder="Search...">
+      </form>
+    </div>
+
+    <div class="container"  align="center">
+  <ng-include src="'views/foot.html'"></ng-include>
+</div>
+
+    <!-- Old layout-->
+    <!-- <div class="container">
+    
+
+      <div ng-view=""></div>
+
+      <div class="footer">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+    </div> -->
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+
+ <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/mainPage.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/course.js"></script>
+        <script src="scripts/controllers/index.js"></script>
+
+         <!-- endbuild -->
+</body>
+</html>

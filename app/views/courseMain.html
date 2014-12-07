@@ -1,0 +1,109 @@
+<div  class="row">
+
+     <div  class="col-md-10"  ng-controller="CourseCtrl"><!--course main start  -->
+
+          <div class="courseMainFirst"><!-- courseMainFirst start -->
+                 <div class="row"><!-- row start -->
+                    <div class="col-xs-6 col-md-4  courseImg">
+                         <img src="{{course.image}}"  class="img-thumbnail  ">
+                    </div>
+                    <div class="col-xs-12  col-md-8">
+                         <ul class="course-summary ">
+                              <li class="course-name" >
+                                 <p>{{course.name}}</p>
+                              </li>
+                              <li class="course-item  row">
+                                   <p  class="item-title col-md-3">課程編號：</p>
+                                   <p  class="item-main col-md-9">{{course.id}}</p>
+                               </li>
+                               <li class="course-item row">
+                                   <p  class="item-title col-md-3">日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期：</p>
+                                   <p  class="item-main  col-md-9">10月6日-10月27日</p>
+                               </li>
+                               <li class="course-item row">
+                                   <p  class="item-title  col-md-3">時&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;間：</p>
+                                   <p  class="item-main  col-md-9">逢週一，三 17:00-19:00</p>
+                               </li>
+                               <li class="course-item row">
+                                   <p  class="item-title  col-md-3">課程費用：</p>
+                                   <p  class="item-price  col-md-9">
+                                        <strong class="item-price">${{course.prices.price}}</strong>
+                                   </p>
+                               </li>
+                               <li class="course-item row">
+                                   <p  class="item-title  col-md-3">材&nbsp;&nbsp;料&nbsp;&nbsp;費：</p>
+                                   <p  class="item-price  col-md-9">
+                                   <strong class="item-price">$450</strong>
+                                   </p>
+                               </li>
+                         </ul>
+                    </div>
+                 </div><!-- row end -->
+               </div><!-- courseMainFirst end -->
+
+               <div class="courseMainSecond"><!-- courseMainSecond  start -->
+
+                    <div class="row">
+                              <div class="col-md-1">
+                                   <img src="images/time.png">
+                              </div>
+                              <div class="col-md-11">
+                                   <p>報名時間</p>
+                                   <p class="dateStyle">{{course.date_start}}&nbsp;<strong>至</strong>&nbsp;{{course.date_end}}</p>
+                              </div>
+                         </div><!-- row end -->
+
+                    <div class="row">
+                              <div class="col-md-1">
+                                   <img src="images/complete.png">
+                              </div>
+                              <div class="col-md-11">
+                                   <p>{{course.owner.name}}</p>
+                                   <p class="wordStyle">地址：{{course.owner.address}}</p>
+                              </div>
+                         </div><!-- row end -->
+
+                    <div class="row">
+                              <div class="col-md-1">
+                                   <img src="images/about.png">
+                              </div>
+                              <div class="col-md-11">
+                                   <p>课程介绍</p>
+                                   <p class="paragraph">{{course.description}}</p>
+                              </div>
+                         </div><!-- row end -->
+
+                    </div><!-- courseMainSecond  end -->
+
+     </div><!-- course main end -->
+
+
+     <div class="col-md-2">
+          <!-- <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix"  role="complementary"> -->
+               <ul class="nav nav-list bs-docs-sidenav affix-top">
+                    <li class="active">
+                         <a href="#overview"><i class="icon-chevron-right"></i> 概览</a>
+                    </li>
+                    <li class="">
+                         <a href="#transitions"><i class="icon-chevron-right"></i> 过渡效果</a>
+                    </li>
+                    <li class="">
+                         <a href="#modals"><i class="icon-chevron-right"></i> 模态对话框</a>
+                    </li>
+
+               </ul>
+          <!-- </div> -->
+     </div>
+</div>
+
+
+<script type="text/javascript">
+     $(function() {
+          $('.nav li').click(function(e) {
+               $('.nav li').removeClass('active');
+               //$(e.target).addClass('active');
+               $(this).addClass('active');
+          });
+     });
+
+     </script>

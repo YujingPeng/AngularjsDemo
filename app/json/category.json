@@ -1,0 +1,8 @@
+[
+    {"courseName":"music","children":"all music"},
+    {"courseName":"music","children":"classcal music"},
+    {"courseName":"Art","children":"Art"},
+    {"courseName":"parint","children":"paint"},
+    {"courseName":"dance","children":"dance"},
+    {"courseName":"liu","children":"liu"}
+]
